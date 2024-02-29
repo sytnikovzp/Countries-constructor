@@ -1,10 +1,10 @@
 'use strict';
 
-function countryConstructor(
-  title,
+function CountriesConstructor(
+  title = 'Ukraine',
   capital = 'Kiev',
-  population = '43790000',
-  area = '603628'
+  population = 43790000,
+  area = 603628
 ) {
   this.title = title;
   this.capital = capital;
@@ -16,12 +16,12 @@ function countryConstructor(
   };
 }
 
-const Ukraine = new countryConstructor('Ukraine');
-const USA = new countryConstructor('USA', 'Washington', 331900000, 9864000);
+const ukraine = new CountriesConstructor();
+const usa = new CountriesConstructor('USA', 'Washington', 331900000, 9864000);
 
-console.log(Ukraine.showCountry());
+console.log(ukraine.showCountry());
 console.log('==========================');
-console.log(USA);
+console.log(usa);
 
 function allProperties(country) {
   for (let key in country) {
@@ -32,7 +32,7 @@ function allProperties(country) {
 }
 
 console.log('==========================');
-allProperties(Ukraine);
+allProperties(ukraine);
 
 console.log('==========================');
-allProperties(USA);
+allProperties(usa);
